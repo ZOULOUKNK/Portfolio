@@ -4,7 +4,7 @@
 
 // Logos officiels des technologies (CDN devicon — gratuit, pas d'installation)
 const TECH_LOGOS = {
-  "Laravel": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+  "Laravel": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
   "Flutter": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
   "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   "Express": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
@@ -70,8 +70,8 @@ const PROJECTS = [
   {
     name: "TaskFlow",
     tag: "TASKFLOW",
-    description: "Application de gestion de tâches et de projets, avec tableaux collaboratifs et suivi de l'avancement.",
-    stack: ["React"],
+    description: "Gestionnaire de tâches personnel : catégories, priorités, filtres, recherche et statistiques de progression, avec sauvegarde dans le navigateur.",
+    stack: ["React", "Vite", "Tailwind CSS"],
     githubUrl: "https://github.com/ZOULOUKNK/TASKFLOW",
     demoUrl: ""
   }
