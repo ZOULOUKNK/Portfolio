@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>CV — ANDRIANIRINA Tomboniaina Honorat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #111827;
+    --text: #374151;
+    --muted: #6B7280;
+    --faint: #9CA3AF;
+    --rule: #E5E7EB;
+    --accent: #0F766E;
+    --display: 'Manrope', 'Segoe UI', sans-serif;
+    --body: 'Inter', 'Segoe UI', sans-serif;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--body);
+    font-size: 8.9pt;
+    line-height: 1.55;
+    color: var(--text);
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page { width: 210mm; height: 297mm; padding: 16mm 17mm 14mm; position: relative; overflow: hidden; }
+  .page::before { /* fin liseré d'accent en haut */
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1.6mm; background: var(--accent);
+  }
+
+  /* ---------- En-tête ---------- */
+  header { display: grid; grid-template-columns: 30mm 1fr; gap: 7mm; align-items: center; }
+  .photo { width: 30mm; height: 30mm; border-radius: 50%; overflow: hidden; background: #F3F4F6; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; display: block; }
+  h1 { font-family: var(--display); font-weight: 800; font-size: 25pt; line-height: 1.05; letter-spacing: -.02em; color: var(--ink); }
+  h1 span { display: block; font-weight: 500; font-size: 17pt; letter-spacing: -.01em; color: var(--text); margin-top: .8mm; }
+  .role { margin-top: 1.4mm; font-family: var(--display); font-weight: 600; font-size: 11pt; color: var(--accent); }
+  .contacts { margin-top: 2.6mm; font-size: 8.1pt; color: var(--muted); }
+  .contacts div { display: flex; }
+  .contacts div + div { margin-top: .8mm; }
+  .contacts a, .contacts span { color: var(--muted); text-decoration: none; }
+  .contacts div > * + *::before { content: ""; display: inline-block; width: 1px; height: 2.6mm; background: var(--rule); margin: 0 2.8mm; vertical-align: -.3mm; }
+
+  .summary {
+    margin-top: 8mm; padding: 4.5mm 0;
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    font-size: 9.6pt; line-height: 1.6; color: var(--ink);
+  }
+
+  /* ---------- Corps ---------- */
+  .cols { margin-top: 7mm; display: grid; grid-template-columns: 1fr 52mm; gap: 11mm; }
+  h2 {
+    font-family: var(--display); font-weight: 700;
+    font-size: 7.6pt; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 3.4mm;
+  }
+  section + section { margin-top: 7.5mm; }
+
+  .item + .item { margin-top: 4.4mm; }
+  .item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .item h3 { font-family: var(--display); font-weight: 700; font-size: 10.2pt; color: var(--ink); line-height: 1.3; }
+  .when { font-size: 8pt; color: var(--faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .where { font-size: 8.4pt; color: var(--muted); }
+  .item ul { margin-top: 1.4mm; padding-left: 4mm; }
+  .item li { margin-top: .6mm; }
+  .item li::marker { color: var(--faint); }
+  .item p.desc { margin-top: 1mm; }
+  .tech { margin-top: .9mm; font-size: 7.9pt; color: var(--accent); }
+
+  .side p, .side li { font-size: 8.5pt; }
+  .side ul { list-style: none; }
+  .side li + li { margin-top: 1mm; }
+  .skill + .skill { margin-top: 2.8mm; }
+  .skill b, .edu b { display: block; font-family: var(--display); font-weight: 700; font-size: 8.6pt; color: var(--ink); }
+  .skill span { color: var(--text); }
+  .edu + .edu { margin-top: 3.2mm; }
+  .edu .when { display: block; }
+  .lang { display: flex; justify-content: space-between; }
+  .lang span { color: var(--muted); }
+
+  footer {
+    position: absolute; left: 17mm; right: 17mm; bottom: 10mm;
+    display: flex; justify-content: space-between;
+    font-size: 7.4pt; color: var(--faint);
+    border-top: 1px solid var(--rule); padding-top: 2.6mm;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="photo"><img src="../photo.jpg" alt="Photo de Honorat Andrianirina"></div>
+    <div>
+      <h1>ANDRIANIRINA <span>Tomboniaina Honorat</span></h1>
+      <p class="role">Développeur web full-stack junior</p>
+      <div class="contacts">
+        <div><span>+261 32 77 159 29</span><span>+261 34 49 969 89</span><a href="mailto:andrianirinahonorat@gmail.com">andrianirinahonorat@gmail.com</a></div>
+        <div><span>Mahajanga, Madagascar</span><a href="https://github.com/ZOULOUKNK">github.com/ZOULOUKNK</a></div>
+      </div>
+    </div>
+  </header>
+
+  <p class="summary">Étudiant en Licence 3 Génie Informatique à l'ISSTM Mahajanga. Je conçois des applications web complètes avec Laravel, React et Node.js, de la base de données à l'interface. En stage à la DRETFP Boeny, j'ai livré deux applications utilisées par l'administration.</p>
+
+  <div class="cols">
+    <main>
+      <section>
+        <h2>Expérience</h2>
+        <div class="item">
+          <div class="item-head"><h3>Stagiaire développeur web</h3><span class="when">2026</span></div>
+          <p class="where">DRETFP Boeny — Direction Régionale de l'Enseignement Technique et de la Formation Professionnelle</p>
+          <ul>
+            <li>Conception et développement de Sport National Manager, plateforme du sport scolaire national.</li>
+            <li>Réalisation d'une application de pointage du personnel par QR code.</li>
+            <li>Recueil des besoins auprès des services, rédaction des guides d'utilisation.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><h3>Magasinier</h3><span class="when">2024 – 2025</span></div>
+          <p class="where">Entreprise du Boina, Mahajanga</p>
+          <ul><li>Gestion des stocks, inventaires et suivi des marchandises.</li></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projets</h2>
+        <div class="item">
+          <div class="item-head"><h3>Sport National Manager</h3><span class="when">Stage DRETFP</span></div>
+          <p class="desc">Compétitions, participants, résultats, repas et logements du sport scolaire national. Tickets repas par QR code, exports PDF, Excel et Word, application installable.</p>
+          <p class="tech">Laravel 12 · React 18 · Tailwind · SQLite · PHPUnit · Playwright</p>
+        </div>
+        <div class="item">
+          <div class="item-head"><h3>Gestion de pointage par QR code</h3><span class="when">Stage DRETFP</span></div>
+          <p class="desc">Pointage d'entrée et de sortie de 43 agents sur le réseau local, avec rôles, journal d'audit, archives et exports.</p>
+          <p class="tech">Node.js · Express · React · TypeScript · SQLite</p>
+        </div>
+        <div class="item">
+          <div class="item-head"><h3>Helpdesk</h3><span class="when">Académique</span></div>
+          <p class="desc">Gestion de tickets de support avec rôles, assignation et pièces jointes sécurisées.</p>
+          <p class="tech">Laravel 12 · PHP · SQLite</p>
+        </div>
+        <div class="item">
+          <div class="item-head"><h3>TaskFlow</h3><span class="when">Académique</span></div>
+          <p class="desc">Gestion des tâches de la promotion L3 Informatique.</p>
+          <p class="tech">React · Vite · Tailwind</p>
+        </div>
+      </section>
+    </main>
+
+    <aside class="side">
+      <section>
+        <h2>Compétences</h2>
+        <div class="skill"><b>Back-end</b><span>PHP, Laravel, Node.js, Express</span></div>
+        <div class="skill"><b>Front-end</b><span>JavaScript, TypeScript, React, HTML, CSS, Tailwind</span></div>
+        <div class="skill"><b>Mobile</b><span>React Native, Flutter</span></div>
+        <div class="skill"><b>Données</b><span>SQL, MySQL, SQLite</span></div>
+        <div class="skill"><b>Outils</b><span>Git, Docker, Linux, PHPUnit, Playwright</span></div>
+      </section>
+
+      <section>
+        <h2>Formation</h2>
+        <div class="edu"><b>Licence 3 Génie Informatique</b><span class="where">ISSTM, Université de Mahajanga</span><span class="when">2025 – 2026</span></div>
+        <div class="edu"><b>Baccalauréat série D</b><span class="where">École privée Notre-Dame</span><span class="when">2021 – 2022</span></div>
+      </section>
+
+      <section>
+        <h2>Langues</h2>
+        <ul>
+          <li class="lang">Malagasy <span>Maternelle</span></li>
+          <li class="lang">Français <span>Intermédiaire</span></li>
+          <li class="lang">Anglais <span>Intermédiaire</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Intérêts</h2>
+        <p>Football, gaming, musique</p>
+      </section>
+    </aside>
+  </div>
+
+  <footer>
+    <span>Projets et code source</span>
+    <span><a href="https://github.com/ZOULOUKNK">github.com/ZOULOUKNK</a> &nbsp;·&nbsp; <a href="https://zoulouknk.github.io/Portfolio/">zoulouknk.github.io/Portfolio</a></span>
+  </footer>
+</div>
+</body>
+</html>
