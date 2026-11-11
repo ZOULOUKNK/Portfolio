@@ -1,55 +1,65 @@
 # Portfolio — Honorat Andrianirina
 
-Portfolio statique (HTML/CSS/JS vanilla, sans build), prêt à déployer sur GitHub Pages.
+Site en ligne : **https://zoulouknk.github.io/Portfolio/**
 
-## 🎨 Comment personnaliser
+Portfolio statique (HTML/CSS/JS vanilla, sans build), publié par GitHub Pages depuis la branche `main`, dossier racine.
+
+## Comment modifier
 
 | Je veux changer... | Où aller |
 |---|---|
-| Mon nom, mon accroche, ma présentation | `index.html`, sections `#home` et `#about` |
-| Mes couleurs | `style.css`, bloc `:root` en haut du fichier (variables `--bg`, `--accent`, etc.) |
-| Mes compétences | `script.js`, tableau `SKILLS` |
-| Mes projets | `script.js`, tableau `PROJECTS` — ajoute un objet pour chaque nouveau projet |
-| Mes liens (email, GitHub, LinkedIn) | `index.html`, section `#contact`, et `script.js` (adresse mail du formulaire) |
-| Mon CV téléchargeable | Place ton fichier `cv.pdf` à la racine du dossier (le bouton "Télécharger mon CV" pointe déjà dessus) |
-| Police / typographie | `index.html` (lien Google Fonts) + `style.css` (variables `--font-*`) |
+| Accroche, présentation, textes des sections | `index.html` (sections `#home`, `#about`, `#journey`, `#projects`, `#skills`, `#contact`) |
+| Couleurs (thème sombre et clair) | `style.css`, blocs `:root` et `[data-theme="light"]` en haut du fichier |
+| Expérience et formation | `script.js`, tableaux `EXPERIENCE` et `EDUCATION` |
+| Projets | `script.js`, tableau `PROJECTS` (`featured: true` = grande carte ; `categories` = filtres Stage / Web / Mobile) |
+| Compétences | `script.js`, tableau `SKILLS` (logos dans `TECH_LOGOS`) |
+| Email, WhatsApp, GitHub, LinkedIn | `index.html` (accueil, section `#contact`, bouton WhatsApp flottant) et `script.js` (adresse du formulaire) |
+| CV téléchargeable | remplacer `cv.pdf` à la racine |
+| Polices | `index.html` (lien Google Fonts) + `style.css` (variables `--font-*`) |
 
-Aucune commande à lancer : tu peux ouvrir `index.html` directement dans un navigateur pour prévisualiser.
+## Aperçu local
 
-## 🚀 Déployer sur GitHub Pages
+Ouvrir `index.html` dans un navigateur, ou lancer un petit serveur :
 
-1. **Crée un dépôt GitHub** (ex. `portfolio` ou `ton-pseudo.github.io` pour une URL courte)
-2. Dans le dossier du projet, exécute :
-   ```bash
-   git init
-   git add .
-   git commit -m "Portfolio initial"
-   git branch -M main
-   git remote add origin https://github.com/TON-PSEUDO/NOM-DU-DEPOT.git
-   git push -u origin main
-   ```
-3. Sur GitHub : va dans **Settings → Pages**
-4. Dans **Source**, sélectionne la branche `main` et le dossier `/ (root)`, puis **Save**
-5. Après 1-2 minutes, ton site sera disponible à :
-   - `https://TON-PSEUDO.github.io/NOM-DU-DEPOT/` (dépôt classique)
-   - ou `https://TON-PSEUDO.github.io/` (si le dépôt s'appelle `TON-PSEUDO.github.io`)
-
-## 📁 Structure
-
-```
-portfolio/
-├── index.html   → structure et contenu
-├── style.css    → design (variables de thème en haut de fichier)
-├── script.js    → données (compétences, projets) + interactions
-├── cv.pdf       → à ajouter toi-même
-└── README.md    → ce guide
+```bash
+python -m http.server 5500
 ```
 
-## ✅ Fonctionnalités incluses
+puis ouvrir http://127.0.0.1:5500/.
 
-- Responsive (mobile / tablette / desktop)
-- Mode sombre / clair avec mémorisation du choix
-- Menu mobile
-- Animations légères au scroll
-- Formulaire de contact (ouvre le client mail — remplaçable par Formspree/EmailJS)
-- Aucune dépendance npm — 100% statique
+## Publier une modification
+
+```bash
+git add -A
+git commit -m "Décrire la modification"
+git push
+```
+
+GitHub Pages met le site à jour en une à deux minutes.
+
+## Structure
+
+```
+Portfolio/
+├── index.html    → structure et textes
+├── style.css     → design (thèmes sombre et clair)
+├── script.js     → données (parcours, projets, compétences) et interactions
+├── photo.jpg     → photo de profil
+├── cv.pdf        → CV téléchargé par le bouton « Mon CV »
+├── cv-source/    → sources HTML de deux autres versions du CV (graphique et sobre)
+└── README.md
+```
+
+Pour régénérer un PDF depuis `cv-source/` (Microsoft Edge) :
+
+```powershell
+& "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless --no-pdf-header-footer --virtual-time-budget=10000 --print-to-pdf="cv-genere.pdf" "file:///CHEMIN/VERS/cv-source/cv.html"
+```
+
+## Fonctionnalités
+
+- Responsive (mobile, tablette, ordinateur) et thème sombre / clair mémorisé
+- Chiffres clés animés, parcours en frise, projets filtrables
+- Contact par formulaire (ouvre le logiciel de messagerie, avec type de demande), WhatsApp et copie de l'email
+- Lien d'évitement, menu mobile accessible au clavier, animations réduites si le système le demande
+- Aucune dépendance npm — 100 % statique
